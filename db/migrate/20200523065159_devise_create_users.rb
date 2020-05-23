@@ -34,9 +34,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
       # google attr:
 
-      t.string :uid
-      t.string :full_name
-      t.string :avatar_url
+      # t.string :uid
+      # t.string :full_name
+      # t.string :avatar_url
 
       t.timestamps null: false
     end

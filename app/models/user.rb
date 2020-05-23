@@ -9,6 +9,11 @@ class User < ApplicationRecord
 
     def self.from_google(email:, full_name:, uid:, avatar_url:)
      	return nil unless email =~ /@gmail.com\z/
-     	create_with(uid: uid , full_name: full_name, avatar_url: avatar_url).find_or_create_by!(email: email)
+     	create_with(uid: uid , full_name: full_name, password: Devise.friendly_token[0,20], avatar_url: avatar_url).find_or_create_by!(email: email)
     end
+
+    def username
+      return self.email.split('@')[0].capitalize
+    end
+
 end

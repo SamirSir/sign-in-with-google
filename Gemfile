@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 # custom gem
-
+gem 'hirb'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'

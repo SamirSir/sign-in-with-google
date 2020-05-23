@@ -6,7 +6,7 @@ class Users::SessionsController < ApplicationController
 	end
 
 	def after_sign_in_path_for(resource)
-		stored_location_for(resource) || main_page_path
+		main_page_path
 	end
 
 end
