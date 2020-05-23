@@ -3,5 +3,6 @@ class HomesController < ApplicationController
 	end
 
 	def main
+		@users = User.all
 	end
 end
